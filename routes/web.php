@@ -25,6 +25,8 @@ Route::get('lang/{lang}', 'App\Http\Controllers\LanguageController@switchLang')-
 //Survey Routes
 Route::get('/survey', 'App\Http\Controllers\admin\SurveyController@create')->name("admin.survey.create");
 Route::post('/survey/save', 'App\Http\Controllers\admin\SurveyController@save')->name("admin.survey.save");
+
+Route::get('/stats', 'App\Http\Controllers\admin\StatsController@sendStats')->name("admin.stats.sendStats");
 //For user
 
 Route::get('/profile', 'App\Http\Controllers\user\ProfileController@show')->name("user.profile.show");

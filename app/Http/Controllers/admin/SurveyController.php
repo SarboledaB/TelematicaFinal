@@ -11,8 +11,7 @@ namespace App\Http\Controllers\admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Survey;
-use App\Interfaces\ImageStorage;
-use Illuminate\Support\Facades\URL;
+use Illuminate\Support\Facades\Auth;
 
 class SurveyController extends Controller
 {
@@ -28,7 +27,6 @@ class SurveyController extends Controller
         $data = []; //to be sent to the view
 
         $data["title"] = "Create product";
-        $data["categories"] = $data["petItems"] = [];
         return view('admin.survey.create')->with("data", $data);
     }
 
@@ -36,12 +34,8 @@ class SurveyController extends Controller
     {
         /* try { */
         Survey::validate($request);
-        $storeInterface = app(ImageStorage::class);
-        $storeInterface->store($request);
-        $name = $request->file('image')->getClientOriginalName();
-        $path = URL::asset('storage/' . $name);
-        Survey::create(["name" => strtoupper($request->name), "details" => $request->details, "category_id" => $request->category_id, "value" => $request->value, "rating" => $request->rating, "image" => $path]);
-        return back()->with('success', 'Pet Item created successfully!');
+        Survey::create(["name" => strtoupper($request->name), "career" => $request->career, "commune" => $request->commune, "user_id" => Auth::id()]);
+        return back()->with('success', 'Se ha guardado la encuesta!');
         /* } catch (\Throwable $th) {
             return back()->with('danger', 'Pet Item was not create!');
         } */

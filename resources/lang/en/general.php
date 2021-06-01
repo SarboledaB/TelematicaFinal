@@ -21,6 +21,8 @@ return [
     'cart' => 'Cart',
     'menu' => 'Menu',
 
+    'stats' => 'Statistics',
+
 
     // Atributes 
     'id' => 'ID',
@@ -52,8 +54,8 @@ return [
     'category' => 'Category',
     'image' => 'Image',
     'total' => 'Total',
-    
-    
+
+
     // Actions
     'register' => 'Register',
     'remember_me' => 'Remember Me',
@@ -62,7 +64,7 @@ return [
     'logout' => 'Logout',
     'confirm_password' => 'Confirm password',
     'buy' => 'Buy',
-    'create' => 'Create',  
+    'create' => 'Create',
     'create_user' => 'Create User',
     'delete' => 'Delete',
     'edit' => 'Edit',
@@ -80,7 +82,7 @@ return [
     'export_orders' => 'Export Orders',
     'input_data' => 'Please input your data: ',
 
-    
+
     'payment_method' => 'Payment Method',
     'payment_method_' => 'Payment Method: ',
     'description' => 'Description',

@@ -25,26 +25,26 @@
                             <br>
                             <label>@lang('survey.commune')</label>
                             <select class="form-select form-control" name="commune" value="0" required>
-                                <option value="0">@lang('survey.undefined')</option>
-                                <option value="1">@lang('survey.commune') 1</option>
-                                <option value="2">@lang('survey.commune') 2</option>
-                                <option value="3">@lang('survey.commune') 3</option>
-                                <option value="4">@lang('survey.commune') 4</option>
-                                <option value="5">@lang('survey.commune') 5</option>
-                                <option value="6">@lang('survey.commune') 6</option>
-                                <option value="7">@lang('survey.commune') 7</option>
-                                <option value="8">@lang('survey.commune') 8</option>
-                                <option value="9">@lang('survey.commune') 9</option>
-                                <option value="10">@lang('survey.commune') 10</option>
+                                <option value="Ninguna">@lang('survey.undefined')</option>
+                                <option value="comuna 1">@lang('survey.commune') 1</option>
+                                <option value="comuna 2">@lang('survey.commune') 2</option>
+                                <option value="comuna 3">@lang('survey.commune') 3</option>
+                                <option value="comuna 4">@lang('survey.commune') 4</option>
+                                <option value="comuna 5">@lang('survey.commune') 5</option>
+                                <option value="comuna 6">@lang('survey.commune') 6</option>
+                                <option value="comuna 7">@lang('survey.commune') 7</option>
+                                <option value="comuna 8">@lang('survey.commune') 8</option>
+                                <option value="comuna 9">@lang('survey.commune') 9</option>
+                                <option value="comuna 10">@lang('survey.commune') 10</option>
                             </select>
                             <br>
                             <label>@lang('survey.career')</label>
                             <select class="form-select form-control" name="career" value="0" required>
-                                <option value="0">@lang('survey.undefined')</option>
-                                <option value="1">@lang('survey.medicine')</option>
-                                <option value="2">@lang('survey.ing')</option>
-                                <option value="3">@lang('survey.advocacy')</option>
-                                <option value="4">@lang('survey.degree')</option>
+                                <option value="Ninguna">@lang('survey.undefined')</option>
+                                <option value="Medicina">@lang('survey.medicine')</option>
+                                <option value="Ingenieria">@lang('survey.ing')</option>
+                                <option value="Derecho">@lang('survey.advocacy')</option>
+                                <option value="Licenciatura">@lang('survey.degree')</option>
                             </select>
                             <br>
                             <input class="btn btn-primary btn-lg btn-block" type="submit" value="@lang('survey.save')" />

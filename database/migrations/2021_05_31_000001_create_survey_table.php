@@ -10,7 +10,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreatePetItemTable extends Migration
+class CreateSurveyTable extends Migration
 {
 
     /**
@@ -20,14 +20,12 @@ class CreatePetItemTable extends Migration
      */
     public function up()
     {
-        Schema::create('pet_items', function (Blueprint $table) {
+        Schema::create('surveys', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->text('name');
-            $table->bigInteger('category_id');
-            $table->text('details');
-            $table->text('image');
-            $table->double('value');
-            $table->integer('rating');
+            $table->text('commune');
+            $table->text('career');
+            $table->integer('user_id');
             $table->timestamps();
         });
     }
@@ -39,6 +37,6 @@ class CreatePetItemTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('pet_item');
+        Schema::dropIfExists('surveys');
     }
 }

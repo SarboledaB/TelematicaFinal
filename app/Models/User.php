@@ -28,12 +28,12 @@ class User extends Authenticatable
     {
         $request->validate(
             [
-            "username" => "required",
-            "type" => "boolean",
-            "firstName" => "required",
-            "lastName" => "required",
-            "email" => "required|email",
-            "password" => "required"
+                "username" => "required",
+                "type" => "boolean",
+                "firstName" => "required",
+                "lastName" => "required",
+                "email" => "required|email",
+                "password" => "required"
             ]
         );
     }
@@ -107,19 +107,9 @@ class User extends Authenticatable
     {
         $this->attributes['email'] = $email;
     }
-    
+
     public function getRole()
     {
         return $this->attributes['role'];
-    }
-    
-    public function orders()
-    {
-        return $this->hasMany(Order::class);
-    }
-
-    public function donations() 
-    {
-        return $this->hasMany(Donation::class);
     }
 }

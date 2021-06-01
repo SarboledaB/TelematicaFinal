@@ -32,7 +32,6 @@ class Survey extends Model
                 "name" => "required",
                 "commune" => "required",
                 "career" => "required",
-                "user_id" => "required",
             ]
         );
     }
