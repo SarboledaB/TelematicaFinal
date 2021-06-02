@@ -62,7 +62,7 @@ class StatsController extends Controller
             /* array_push($dataStats, $acum); */
             $resp->$value = $acum;
         }
-        Mail::to('sarboledabotero@gmail.com')->send(new Statistics($resp));
+        Mail::to('ialondonoo@eafit.edu.co')->send(new Statistics($resp));
         return back()->with('success', 'Se han enviado las Estadisticas al administrador!');
         /* return response()->json($resp, 200); */
     }
